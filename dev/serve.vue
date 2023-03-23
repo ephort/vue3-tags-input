@@ -22,7 +22,13 @@
                          placeholder="multiple"
                          :select-items="suggestItems"
                          :duplicate-select-item="false"
-                         @on-select="handleSelectedTag">
+                         @on-select="handleSelectedTag"
+                         :tags="tags"
+                         :validate="csValidate"
+                         @on-focus="handleFocus"
+                         @on-blur="handleBlur"
+                         @on-remove="handleRemove"
+                         @on-tags-changed="handleChangeTag">
           <template #item="{ tag, index }">
             {{ tag.name }}
           </template>
