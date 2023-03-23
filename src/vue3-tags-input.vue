@@ -276,9 +276,6 @@ export default {
       this.$emit('on-blur', e);
     },
     addNew(e) {
-      if (this.select) {
-        return;
-      }
       const keyShouldAddTag = e
           ? this.addTagOnKeys.indexOf(e.keyCode) !== -1
           : true;
